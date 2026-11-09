@@ -3,26 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rafael Oliveira · Jogos</title>
-  <style>
-    :root { --fundo: #fbf3e4; --texto: #2a1a12; --suave: #6b5446; --destaque: #c8462b; }
-    @media (prefers-color-scheme: dark) { :root { --fundo: #1f1712; --texto: #f3e7d6; --suave: #c2ad98; --destaque: #ff8a5c; } }
-    body { margin: 0; background: var(--fundo); color: var(--texto); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-    main { max-width: 720px; margin: 0 auto; padding: 40px 16px; }
-    h1 { font-size: 1.6rem; margin: 0 0 1.5rem; }
-    a { color: var(--destaque); }
-    .jogo h2 { margin: 0; font-size: 1.2rem; }
-    .jogo p { margin: .3rem 0; color: var(--suave); }
-  </style>
+  <title>Rafael Oliveira · Jogos e apps</title>
+  <meta name="description" content="Jogos e apps para Android feitos por Rafael Oliveira, com a cara do Nordeste.">
+  <link rel="icon" href="cortador-arretado/img/icone.png">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<main>
-  <h1>Jogos de Rafael Oliveira</h1>
-  <div class="jogo">
-    <h2>Cortador Arretado</h2>
-    <p>Corte cuscuz, caju e tapioca e fuja da bombinha! O jogo de corte do Nordeste. Em breve para Android.</p>
-    <p><a href="cortador-arretado/privacidade/">Política de privacidade</a></p>
+<header class="topo">
+  <div class="dentro">
+    <h1 class="titulo">Rafael Oliveira</h1>
+    <p>Jogos e apps para Android, com a cara do Nordeste.</p>
   </div>
+</header>
+<main>
+  <h2 class="titulo">Jogos</h2>
+  <article class="cartao">
+    <a href="cortador-arretado/"><img src="cortador-arretado/img/destaque.png" alt="Cortador Arretado: corte o que é bom, fuja da bombinha!" width="1024" height="500"></a>
+    <div class="corpo">
+      <div class="cabeca">
+        <img src="cortador-arretado/img/icone.png" alt="" width="72" height="72">
+        <div>
+          <h3 class="titulo">Cortador Arretado</h3>
+          <span class="selo">Em breve no Android</span>
+        </div>
+      </div>
+      <p>Corte cuscuz, caju e tapioca e fuja da bombinha! O jogo de corte do Nordeste, no estilo da xilogravura de cordel.</p>
+      <div class="botoes">
+        <a class="botao" href="cortador-arretado/">Conhecer o jogo</a>
+        <a class="botao leve" href="cortador-arretado/privacidade/">Política de privacidade</a>
+      </div>
+    </div>
+  </article>
+
+  <h2 class="titulo">Contato</h2>
+  <p>Dúvidas, sugestões ou suporte: <a href="mailto:rafacoder.apps@gmail.com">rafacoder.apps@gmail.com</a></p>
 </main>
+<footer>Feito no Brasil por Rafael Oliveira</footer>
 </body>
 </html>

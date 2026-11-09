@@ -1,0 +1,49 @@
+/* Estilo comum do site (cores da Chita de São João, a mesma paleta do Cortador Arretado). */
+@font-face {
+  font-family: "Londrina Solid";
+  src: url("fontes/londrina-solid-900.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+:root {
+  --fundo: #fbf3e4; --cartao: #fffaf1; --texto: #2a1a12; --suave: #6b5446;
+  --destaque: #c8462b; --vermelho: #a3122a; --ouro: #ffc93c; --linha: #e6d6bd;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fundo: #1f1712; --cartao: #2a201a; --texto: #f3e7d6; --suave: #c2ad98; --destaque: #ff8a5c; --linha: #3a2d24; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fundo); color: var(--texto); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+a { color: var(--destaque); }
+img { max-width: 100%; display: block; }
+.titulo { font-family: "Londrina Solid", system-ui, sans-serif; font-weight: 900; letter-spacing: .01em; line-height: 1.05; }
+
+/* faixa do topo com bandeirinhas */
+.topo { background: var(--vermelho); color: #fff8ec; padding: 0 16px 28px; position: relative; overflow: hidden; }
+.topo::before {
+  content: ""; display: block; height: 26px; margin: 0 -16px 22px;
+  background:
+    conic-gradient(from 150deg at 50% 0, #ffc93c 0 60deg, transparent 0) 0 0 / 40px 26px,
+    conic-gradient(from 150deg at 50% 0, #3a78c9 0 60deg, transparent 0) 20px 0 / 40px 26px;
+  background-repeat: repeat-x;
+}
+.topo .dentro { max-width: 880px; margin: 0 auto; }
+.topo h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); }
+.topo p { margin: .3rem 0 0; color: #fbe7c4; }
+
+main { max-width: 880px; margin: 0 auto; padding: 28px 16px 48px; }
+h2 { font-size: 1.5rem; margin: 2rem 0 .6rem; }
+.cartao { background: var(--cartao); border: 2px solid var(--linha); border-radius: 16px; overflow: hidden; }
+.cartao .corpo { padding: 16px 18px 18px; }
+.cartao .cabeca { display: flex; gap: 14px; align-items: center; }
+.cartao .cabeca img { width: 72px; height: 72px; border-radius: 18px; border: 2px solid var(--linha); flex: none; }
+.cartao h3 { margin: 0; font-size: 1.7rem; }
+.selo { display: inline-block; font-size: .8rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--ouro); color: #2a1a12; }
+.suave { color: var(--suave); }
+.botoes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.botao { display: inline-block; padding: 10px 18px; border-radius: 999px; font-weight: 700; text-decoration: none; background: var(--destaque); color: #fff; }
+.botao.leve { background: transparent; color: var(--destaque); border: 2px solid var(--destaque); }
+.prints { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.prints img { border-radius: 14px; border: 2px solid var(--linha); }
+ul.lista { padding-left: 1.2rem; }
+footer { border-top: 1px solid var(--linha); color: var(--suave); font-size: .9rem; padding: 18px 16px 32px; text-align: center; }
